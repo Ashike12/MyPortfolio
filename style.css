@@ -205,6 +205,8 @@ p {
 	background-position: top center;
 	position: relative;
 	z-index: 1;
+	transform: scale(1);
+	animation: landing-view-animation 3.5s ease forwards;
 }
 #landing-view::after {
 	content: '';
@@ -299,6 +301,10 @@ p {
 	position: relative;
 	z-index: 1;
 	overflow: hidden;
+}
+#services .service-item:hover {
+	transform: scale(1.1);
+	transition: .2s ease transform;
 }
 #services .service-item::after {
 	content: '';
@@ -565,6 +571,12 @@ p {
 	100% {
 		color: crimson;
 		font-weight: 500;
+	}
+}
+
+@keyframes landing-view-animation {
+	0% {
+		transform: scale(0.9);
 	}
 }
 /* End Keyframes */
