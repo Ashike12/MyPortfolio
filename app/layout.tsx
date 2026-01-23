@@ -15,7 +15,7 @@ export default function RootLayout({
 }): JSX.Element {
   return (
     <html lang="en">
-      <body className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 w-full">
+      <body className="bg-white text-gray-900 w-full">
         <Navbar />
         <main >{children}</main>
       </body>

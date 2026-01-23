@@ -13,7 +13,7 @@ export default function Navbar(): JSX.Element {
   const [open, setOpen] = useState<boolean>(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur border-b border-gray-200 dark:border-gray-700">
+    <header className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur border-b border-gray-200">
       <div className=" mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo / Name */}
         <Link href="/" className="text-xl font-bold">
@@ -42,7 +42,7 @@ export default function Navbar(): JSX.Element {
 
       {/* Mobile Navigation */}
       {open && (
-        <div className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+        <div className="md:hidden bg-white border-t border-gray-200">
           <nav className="flex flex-col p-4 gap-4">
             <NavItem href="#home" label="Home"/>
             <NavItem href="#skills" label="Skills"/>
@@ -62,7 +62,7 @@ function NavItem({ href, label, onClick }: NavItemProps): JSX.Element {
     <Link
       href={href}
       onClick={onClick}
-      className="text-gray-700 dark:text-gray-300 hover:text-blue-500 transition-colors"
+      className="text-gray-700 hover:text-blue-500 transition-colors"
     >
       {label}
     </Link>

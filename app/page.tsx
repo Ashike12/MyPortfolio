@@ -16,14 +16,14 @@ export default function Home(): JSX.Element {
 
       <section
         id="skills" key={'skills'}
-        className="bg-gray-50 dark:bg-gray-800 pt-15 w-full md:min-w-[60%] md:max-w-[60%]"
+        className="bg-gray-50 pt-15 w-full md:min-w-[60%] md:max-w-[60%]"
       >
         <Skills />
       </section>
 
       <section
         id="tools" key={'tools'}
-        className="bg-gray-50 dark:bg-gray-800 pt-15 w-full md:min-w-[60%] md:max-w-[60%]"
+        className="bg-gray-50 pt-15 w-full md:min-w-[60%] md:max-w-[60%]"
       >
         <Tools />
       </section>
@@ -38,7 +38,7 @@ export default function Home(): JSX.Element {
 
       <section
         id="education" key={'education'}
-        className="bg-gray-50 dark:bg-gray-800 pt-15 w-full md:min-w-[60%] md:max-w-[60%]"
+        className="bg-gray-50 pt-15 w-full md:min-w-[60%] md:max-w-[60%]"
       >
         <Education />
       </section>
