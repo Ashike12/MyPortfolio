@@ -1,0 +1,123 @@
+"use client"; // <-- MUST be first line
+
+import Image from "next/image";
+import ProgressBar from './custom/ProgressBar';
+import { motion } from 'framer-motion';
+import { PROFILE_INFO } from "../const/my-profile-info.constant";
+import { ISkill } from "../interfaces/skill.interface";
+
+const containerVariants = {
+    hidden: {},
+    visible: {
+        transition: {
+            staggerChildren: 0.5, // stagger each child by 0.3s
+        },
+    },
+};
+
+const childVariantsLeft = {
+    hidden: { opacity: 0, x: -200 },
+    visible: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            duration: 0.6,
+        },
+    },
+};
+
+const childVariantsRight = {
+    hidden: { opacity: 0, x: 200 },
+    visible: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            duration: 0.6,
+        },
+    },
+};
+export default function Skills() {
+
+    return (
+        <div className='felx felx-col px-4'>
+            <h2 className='text-center'>Professional skills</h2>
+            <h2>Skills</h2>
+            {PROFILE_INFO.SkillData.map((skill: ISkill, index) => (
+                <motion.div
+                    id={skill.id}
+                    key={skill.id}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={containerVariants}
+                    className="space-y-2"
+                >
+                    <motion.div variants={index % 2 == 0 ? childVariantsLeft : childVariantsRight} className="flex flex-row justify-between pt-3">
+                        <p>{skill.name}</p>
+
+                        {!skill.isIconImage && (
+                            <div className="flex flex-row gap-2">
+                                {skill.icons.map((Icon, index) => (
+                                    <Icon key={index} className="text-2xl" />
+                                ))}
+                            </div>
+                        )}
+                        {skill.isIconImage && (
+                            <div className="flex flex-row gap-2">
+                                {skill.icons.map((Icon) => (
+                                    <Image
+                                        className="w-6"
+                                        src={Icon as string}
+                                        alt={skill.name}
+                                    />
+                                ))}
+                            </div>
+                        )}
+                    </motion.div>
+                    <motion.div variants={index % 2 == 0 ? childVariantsLeft : childVariantsRight}>
+                        <ProgressBar gradientClass={skill.gradientClass} value={skill.value} />
+                    </motion.div>
+                </motion.div>
+            ))}
+            <div className='border-[1px] border-[#b7b7b7] mt-10 shadow-[0_0_6px_rgba(34,211,238,0.4)]'></div>
+            <h2 className='pt-5'>Knowledge</h2>
+            {PROFILE_INFO.KnowledgeData.map((skill: ISkill, index) => (
+                <motion.div
+                    id={skill.id}
+                    key={skill.id}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={containerVariants}
+                    className="space-y-2"
+                >
+                    <motion.div variants={index % 2 == 0 ? childVariantsLeft : childVariantsRight} className="flex flex-row justify-between pt-3">
+                        <p>{skill.name}</p>
+
+                        {!skill.isIconImage && (
+                            <div className="flex flex-row gap-2">
+                                {skill.icons.map((Icon, index) => (
+                                    <Icon key={index} className="text-2xl" />
+                                ))}
+                            </div>
+                        )}
+                        {skill.isIconImage && (
+                            <div className="flex flex-row gap-2">
+                                {skill.icons.map((Icon) => (
+                                    <Image
+                                        className="w-6"
+                                        src={Icon as string}
+                                        alt={skill.name}
+                                    />
+                                ))}
+                            </div>
+                        )}
+                    </motion.div>
+                    <motion.div variants={index % 2 == 0 ? childVariantsLeft : childVariantsRight}>
+                        <ProgressBar gradientClass={skill.gradientClass} value={skill.value} />
+                    </motion.div>
+                </motion.div>
+            ))}
+        </div >
+    )
+}
