@@ -8,9 +8,9 @@ export default function Tools() {
     return (
         <div className='felx felx-col p-4'>
             <h2 className='text-center'>Tools</h2>
-            <div className="grid grid-cols-4 gap-y-2 gap-x-6 pt-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-2 gap-x-6 pt-5">
                 {PROFILE_INFO.Tools.map((tool) => (
-                    <div className="flex-">
+                    <div className="">
                         <AnimatedMuiCard key={tool.id} hoverScale={1.05}>
                             <div className="flex flex-col justify-center min-h-32">
                                 <h3 className="font-bold px-4 text-center">{tool.name}</h3>

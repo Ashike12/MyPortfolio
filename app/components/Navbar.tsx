@@ -13,7 +13,7 @@ export default function Navbar(): JSX.Element {
   const [open, setOpen] = useState<boolean>(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur border-b border-gray-200">
+    <header className="fixed top-0 left-0 w-screen z-50 bg-white/80 backdrop-blur border-b border-gray-200">
       <div className=" mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo / Name */}
         <Link href="/" className="text-xl font-bold">
