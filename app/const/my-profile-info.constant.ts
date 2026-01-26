@@ -45,6 +45,8 @@ import FamilyIcon from './../../public/assets/icons/family.svg';
 import SoftwareEngIcon from './../../public/assets/icons/software-engineer.svg';
 import FullStackIcon from './../../public/assets/icons/fullStack.png';
 import SeniorIcon from './../../public/assets/icons/Senior-soft.jpg';
+import ghBoardIcon from './../../public/assets/icons/ghBoard.png';
+import azBoardIcon from './../../public/assets/icons/azBoard.png';
 import {
     SiMongodb,
     SiAmazondynamodb,
@@ -106,6 +108,7 @@ export const PROFILE_INFO = {
         {
             id: '15',
             title: 'Role-Based Access Control (RBAC) E2E Automation Testing – Cypress',
+            link: './assets/pdf/side-menu-report.html',
             icon: FaUserShield, duration: 'Apr 2021 - May 2021',
             description: [
                 'This project involved designing and implementing end-to-end automation testing using Cypress for a large insurance-based B2B application with complex role-based access control. Although my primary role was not QA-focused, I took ownership of validating frontend permission logic across a wide range of user roles, including internal and external sales, sales managers, state-level administrators, finance users, premium users, read-only users, and several other role types. Each role had different menu and sub-menu visibility managed entirely on the frontend through role management rules.',
@@ -188,32 +191,33 @@ export const PROFILE_INFO = {
         },
     ],
     KnowledgeData: [
-        { id: 'DataStructureAlgo', name: "Data Structure/Algorithm", icons: [DataStructureIcon, AlgoIcon], value: 80, isIconImage: true, gradientClass: 'from-black-500 via-blue-500 to-orange-500' }, // core language
-        { id: 'CC++', name: "C/C++", icons: [CIcon, CPlusIcon], value: 90, isIconImage: true, gradientClass: 'from-black-500 via-blue-500 to-orange-500' }, // core language
-        { id: 'CJava', name: "C#/Java", icons: [CSharpIcon, JavaIcon], value: 95, isIconImage: true, gradientClass: 'from-black-500 via-blue-500 to-orange-500' }, // core language
-        { id: 'ShellBatch', name: "Shell/Batch scripting", icons: [PowerShellIcon, BatchIcon], value: 70, isIconImage: true, gradientClass: 'from-black-500 via-blue-500 to-orange-500' }, // core language
-        { id: 'PhpWordpress', name: "PHP/Wordpress", icons: [PhpIcon, WordpressIcon], value: 50, isIconImage: true, gradientClass: 'from-black-500 via-yellow-500 to-cyan-500' }, // library
-        { id: 'SystemDesign', name: "SystemDesign", icons: [SystemDesignIcon], value: 70, isIconImage: true, gradientClass: 'from-black-500 via-yellow-500 to-cyan-500' }, // library
-        { id: 'WebHosting', name: "Web Hosting", icons: [WebHostingIcon], value: 40, isIconImage: true, gradientClass: 'from-black-500 via-yellow-500 to-cyan-500' }, // server
-        { id: 'AIMLDeepL', name: "AI/ML/DeepL", icons: [AIIcon, MLIcon, DeepLIcon], value: 55, isIconImage: true, gradientClass: 'from-black-500 via-blue-500 to-orange-500' }, // core language
+        { id: 'DataStructureAlgo', name: "Data Structure/Algorithm", icons: [DataStructureIcon, AlgoIcon], value: 80, isIconImage: true, gradientClass: 'bg-gradient-primary' }, // core language
+        { id: 'CC++', name: "C/C++", icons: [CIcon, CPlusIcon], value: 90, isIconImage: true, gradientClass: 'bg-gradient-primary' }, // core language
+        { id: 'CJava', name: "C#/Java", icons: [CSharpIcon, JavaIcon], value: 95, isIconImage: true, gradientClass: 'bg-gradient-primary' }, // core language
+        { id: 'ShellBatch', name: "Shell/Batch scripting", icons: [PowerShellIcon, BatchIcon], value: 70, isIconImage: true, gradientClass: 'bg-gradient-primary' }, // core language
+        { id: 'PhpWordpress', name: "PHP/Wordpress", icons: [PhpIcon, WordpressIcon], value: 50, isIconImage: true, gradientClass: 'bg-gradient-secondary' }, // library
+        { id: 'SystemDesign', name: "SystemDesign", icons: [SystemDesignIcon], value: 70, isIconImage: true, gradientClass: 'bg-gradient-secondary' }, // library
+        { id: 'WebHosting', name: "Web Hosting", icons: [WebHostingIcon], value: 40, isIconImage: true, gradientClass: 'bg-gradient-secondary' }, // server
+        { id: 'AIMLDeepL', name: "AI/ML/DeepL", icons: [AIIcon, MLIcon, DeepLIcon], value: 55, isIconImage: true, gradientClass: 'bg-gradient-primary' }, // core language
     ],
     SkillData: [
-        { id: 'Dot Net', name: ".Net", icons: [DotNetIcon], value: 99, isIconImage: true, gradientClass: 'from-pink-500 via-purple-500 to-blue-500' }, //BE
-        { id: 'Angular', name: "Angular", icons: [AngularIcon], value: 99, isIconImage: true, gradientClass: 'from-blue-500 via-purple-500 to-pink-500' }, //FE
-        { id: 'React', name: "React", icons: [ReactIcon], value: 99, isIconImage: true, gradientClass: 'from-blue-500 via-purple-500 to-pink-500' }, //FE
-        { id: 'Javascript', name: "Javascript", icons: [JavaScriptIcon], value: 95, isIconImage: true, gradientClass: 'from-blue-500 via-purple-500 to-pink-500' }, //FE
-        { id: 'HTML/CSS/SASS', name: "HTML/CSS/SASS", icons: [HtmlIcon, CssIcon, SassIcon], value: 97, isIconImage: true, gradientClass: 'from-blue-500 via-purple-500 to-pink-500' }, //FE
-        { id: 'Node', name: "Node", icons: [NodeIcon], value: 92, isIconImage: true, gradientClass: 'from-pink-500 via-purple-500 to-blue-500' }, //BE
-        { id: 'Restapi', name: "Rest-Api", icons: [RestApiIcon], value: 95, isIconImage: true, gradientClass: 'from-pink-500 via-purple-500 to-blue-500' }, //BE
-        { id: 'Automation', name: "Automation (E2E, Unit)", icons: [CypressIcon, SeleniumIcon], value: 70, isIconImage: true, gradientClass: 'from-sky-500 via-blue-500 to-green-500' }, //QA
-        { id: 'NoSql', name: "NoSql(MongoDB, DynamoDB)", icons: [SiMongodb, SiAmazondynamodb], value: 95, isIconImage: false, gradientClass: 'from-red-500 via-green-500 to-blue-500' }, //DB
-        { id: 'Sql', name: "Sql(mySql, Oracle)", icons: [SiMysql, SiOracle], value: 60, isIconImage: false, gradientClass: 'from-red-500 via-green-500 to-blue-500' }, //DB
+        { id: 'Dot Net', name: ".Net", icons: [DotNetIcon], value: 99, isIconImage: true, gradientClass: 'bg-gradient-be' }, //BE
+        { id: 'Angular', name: "Angular", icons: [AngularIcon], value: 99, isIconImage: true, gradientClass: 'bg-gradient-fe' }, //FE
+        { id: 'React', name: "React", icons: [ReactIcon], value: 99, isIconImage: true, gradientClass: 'bg-gradient-fe' }, //FE
+        { id: 'Javascript', name: "Javascript", icons: [JavaScriptIcon], value: 95, isIconImage: true, gradientClass: 'bg-gradient-fe' }, //FE
+        { id: 'HTML/CSS/SASS', name: "HTML/CSS/SASS", icons: [HtmlIcon, CssIcon, SassIcon], value: 97, isIconImage: true, gradientClass: 'bg-gradient-fe' }, //FE
+        { id: 'Node', name: "Node", icons: [NodeIcon], value: 92, isIconImage: true, gradientClass: 'bg-gradient-be' }, //BE
+        { id: 'Restapi', name: "Rest-Api", icons: [RestApiIcon], value: 95, isIconImage: true, gradientClass: 'bg-gradient-be' }, //BE
+        { id: 'Automation', name: "Automation (E2E, Unit)", icons: [CypressIcon, SeleniumIcon], value: 70, isIconImage: true, gradientClass: 'bg-gradient-qa' }, //QA
+        { id: 'NoSql', name: "NoSql(MongoDB, DynamoDB)", icons: [SiMongodb, SiAmazondynamodb], value: 95, isIconImage: false, gradientClass: 'bg-gradient-db' }, //DB
+        { id: 'Sql', name: "Sql(mySql, Oracle)", icons: [SiMysql, SiOracle], value: 60, isIconImage: false, gradientClass: 'bg-gradient-db' }, //DB
     ],
     Tools: [
         { id: 'vsstudio', name: 'VS Studio', icons: [vsIcon, vsCodeIcon] },
         { id: 'postmaninsomnia', name: 'Postman/Insomnia', icons: [postmanIcon, insomniaIcon] },
         { id: 'dockerkub', name: 'Docker/Kuberneter', icons: [dockerIcon, kuberIcon] },
         { id: 'source-control', name: 'Source control', icons: [gitIcon, sourceTreeIcon, gitKrakenIcon, bitbucketIcon] },
+        { id: 'project-board', name: 'Sprints and Agile', icons: [ghBoardIcon, azBoardIcon, bitbucketIcon] },
         { id: 'iisserver', name: 'IIS', icons: [IIsIcon] },
         { id: 'redis', name: 'Redis', icons: [RedisIcon] },
         { id: 'websocker', name: 'Websocket', icons: [WebSocketIcon] },

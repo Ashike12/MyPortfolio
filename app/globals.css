@@ -1,4 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import "tailwindcss";
+@import "./styles/theme.css";
 
 :root {
   --background: #ffffff;
@@ -56,18 +60,78 @@ h4 {
 ::-webkit-scrollbar-thumb, .professional-skills {
   border-radius: 9999px;
   background: linear-gradient(180deg,
-      #f97316,
+      var(--color-gradient-6),
       /* orange */
-      #ec4899,
+      var(--color-gradient-8),
       /* pink */
-      #8b5cf6
+      var(--color-gradient-2)
       /* violet */
     );
 }
 
 ::-webkit-scrollbar-thumb:hover, .professional-skills:hover {
   background: linear-gradient(180deg,
-      #ea580c,
-      #db2777,
-      #7c3aed);
+      var(--color-gradient-6),
+      var(--color-gradient-8),
+      var(--color-gradient-2));
+}
+
+.bg-primary { background-color: var(--color-primary-bg); }
+.bg-secondary { background-color: var(--color-secondary-bg); }
+.text-primary { color: var(--color-primary-text); }
+.text-secondary { color: var(--color-secondary-text); }
+.border-primary { border-color: var(--color-primary-border); }
+.border-secondary { border-color: var(--color-secondary-border); }
+
+.bg-gradient-primary {
+  background-image: linear-gradient(
+    to right,
+    var(--color-gradient-7),
+    var(--color-gradient-3),
+    var(--color-gradient-8)
+  );
+}
+.bg-gradient-secondary {
+  background-image: linear-gradient(
+    to right,
+    var(--color-gradient-7),
+    var(--color-gradient-9),
+    var(--color-gradient-10)
+  );
+}
+.bg-gradient-be {
+  background-image: linear-gradient(
+    to right,
+    var(--color-gradient-1),
+    var(--color-gradient-2),
+    var(--color-gradient-3)
+  );
+}
+
+.bg-gradient-fe {
+  background-image: linear-gradient(
+    to right,
+    var(--color-gradient-3),
+    var(--color-gradient-2),
+    var(--color-gradient-1)
+  );
+}
+
+.bg-gradient-qa {
+  background-image: linear-gradient(
+    to right,
+    var(--color-gradient-4),
+    var(--color-gradient-2),
+    var(--color-gradient-5)
+  );
+}
+
+
+.bg-gradient-db {
+  background-image: linear-gradient(
+    to right,
+    var(--color-gradient-6),
+    var(--color-gradient-5),
+    var(--color-gradient-2)
+  );
 }
