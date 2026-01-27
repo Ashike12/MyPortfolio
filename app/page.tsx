@@ -8,7 +8,7 @@ import Education from "./components/Education";
 
 export default function Home(): JSX.Element {
   return (
-    <div className="flex flex-col items-center justify-center pb-20">
+    <div className="flex flex-col items-center justify-center pb-10">
       <div className="bg-[url('/assets/images/bg.jpg')] absolute top-0 left-0 w-full -z-100 h-200 w-full bg-cover bg-center "></div>
       <section id="home" key="home" className=" pt-15 w-full lg:min-w-[60%] lg:max-w-[60%] md:min-w-[90%] md:max-w-[90%]">
         <Profile />
@@ -16,14 +16,14 @@ export default function Home(): JSX.Element {
 
       <section
         id="skills" key={'skills'}
-        className="bg-gray-50 pt-15 w-full lg:min-w-[60%] lg:max-w-[60%] md:min-w-[90%] md:max-w-[90%]"
+        className="pt-15 w-full lg:min-w-[60%] lg:max-w-[60%] md:min-w-[90%] md:max-w-[90%]"
       >
         <Skills />
       </section>
 
       <section
         id="tools" key={'tools'}
-        className="bg-gray-50 pt-15 w-full lg:min-w-[60%] lg:max-w-[60%] md:min-w-[90%] md:max-w-[90%]"
+        className="pt-15 w-full lg:min-w-[60%] lg:max-w-[60%] md:min-w-[90%] md:max-w-[90%]"
       >
         <Tools />
       </section>
@@ -38,7 +38,7 @@ export default function Home(): JSX.Element {
 
       <section
         id="education" key={'education'}
-        className="bg-gray-50 pt-15 w-full lg:min-w-[60%] lg:max-w-[60%] md:min-w-[90%] md:max-w-[90%]"
+        className="pt-15 w-full lg:min-w-[60%] lg:max-w-[60%] md:min-w-[90%] md:max-w-[90%]"
       >
         <Education />
       </section>

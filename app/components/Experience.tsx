@@ -5,7 +5,7 @@ import { PROFILE_INFO } from "../const/my-profile-info.constant";
 export default function Experience() {
     return (
         <div className='felx felx-col p-4'>
-            <h2 className='text-center'>Experiences</h2>
+            <h2 className='text-center text-primary'>Experiences</h2>
             {PROFILE_INFO.ExperienceList.map((exp) =>
             (<div id={exp.id} key={exp.id}
                 className="flex flex-row gap-0 pt-4">
@@ -24,11 +24,11 @@ export default function Experience() {
                 </div>
                 <div className="flex-[19] w-full">
                     <AnimatedMuiCard key={'tool.id'} hoverScale={1.01} startY={0} endY={0} startX={200} endX={0} duration={3}>
-                        <div className="flex flex-col justify-center min-h-32 p-4">
-                            <h3 className="font-bold">{exp.title}</h3>
-                            <div className='border-[1px] border-[#b7b7b7] my-2 shadow-[0_0_6px_rgba(34,211,238,0.4)]'></div>
-                            <p><strong>{exp.duration}</strong></p>
-                            {exp.description && (<p>{exp.description}</p>)}
+                        <div className="flex flex-col justify-center min-h-32 p-4 bg-primary">
+                            <h3 className="font-bold text-primary">{exp.title}</h3>
+                            <div className='border-[1px] border-primary my-2 shadow-[0_0_6px_var(--color-secondary-border)'></div>
+                            <p className="text-primary"><strong>{exp.duration}</strong></p>
+                            {exp.description && (<p className="text-primary">{exp.description}</p>)}
                         </div>
                     </AnimatedMuiCard>
                 </div>

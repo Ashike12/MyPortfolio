@@ -7,7 +7,7 @@ export default function Projects() {
 
     return (
         <div className='felx felx-col p-4'>
-            <h2 className='text-center'>Projects</h2>
+            <h2 className='text-center text-primary'>Projects</h2>
             {PROFILE_INFO.ProjectData.map((exp, index) =>
             (<div id={exp.id} key={exp.id}
                 className="flex flex-row gap-0 pt-4">
@@ -22,23 +22,23 @@ export default function Projects() {
                 </div>
                 <div className="flex-[19] w-full">
                     <AnimatedMuiCard key={'tool.id'} hoverScale={1.02} startY={0} endY={0} startX={200} endX={0} duration={1}>
-                        <div className="flex flex-col justify-center min-h-32 p-4">
+                        <div className="flex flex-col justify-center min-h-32 p-4 bg-primary">
                             <div className="flex flex-row">
-                                <h3 className="font-bold flex-[19]">{index + 1 + ': ' + exp.title}</h3>
+                                <h3 className="font-bold flex-[19] text-primary">{index + 1 + ': ' + exp.title}</h3>
                                 {exp.link && (
-                                    <a href={exp.link} target="_blank" rel="noopener noreferrer" className="pt-1 text-orange-500 text-xl hover:text-black-500">
+                                    <a href={exp.link} target="_blank" rel="noopener noreferrer" className="text-primary pt-1 text-orange-500 text-xl hover:text-black-500">
                                         <FaExternalLinkAlt />
                                     </a>
                                 )}
                             </div>
-                            <div className='border-[1px] border-[#b7b7b7] my-2 shadow-[0_0_6px_rgba(34,211,238,0.4)]'></div>
-                            <p><strong>{exp.duration}</strong></p>
+                            <div className='border-[1px] border-primary my-2 shadow-[0_0_6px_var(--color-secondary-border)'></div>
+                            <p className="text-primary"><strong>{exp.duration}</strong></p>
                             <ul className="list-disc list-inside pt-4">
                                 {exp.description.map((des, index) => (
-                                    <li key={index}> {des} </li>
+                                    <li key={index} className="text-primary"> {des} </li>
                                 ))}
                             </ul>
-                            <p className="pt-2 italic"><strong>Skills used: {exp.skills.join(' . ')}</strong></p>
+                            <p className="pt-2 italic text-primary"><strong>Skills used: {exp.skills.join(' . ')}</strong></p>
                         </div>
                     </AnimatedMuiCard>
                 </div>

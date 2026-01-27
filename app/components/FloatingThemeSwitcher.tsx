@@ -3,9 +3,9 @@
 import { useEffect, useState } from "react";
 
 const THEMES = [
-  { key: "theme-one", label: "One" },
-  { key: "theme-two", label: "Two" },
-  { key: "theme-three", label: "Three" },
+  { key: "theme-one", label: "light" },
+  { key: "theme-two", label: "dark" },
+  { key: "theme-three", label: "other" },
 ] as const;
 
 export default function FloatingThemeSwitcher() {
@@ -27,10 +27,10 @@ export default function FloatingThemeSwitcher() {
     THEMES.find((t) => t.key === theme)?.label ?? "Theme";
 
   return (
-    <div className="fixed bottom-5 right-5 z-50 group">
+    <div className="fixed bottom-4 right-4 z-50 group w-14">
       <div
         className="
-          bg-white
+          bg-secondary
           border border-gray-300
           rounded-full
           shadow-lg
@@ -41,7 +41,7 @@ export default function FloatingThemeSwitcher() {
         "
       >
         {/* Current theme (always visible) */}
-        <div className="text-sm font-medium text-center">
+        <div className="text-sm font-medium text-center text-primary">
           {currentLabel}
         </div>
 
@@ -62,12 +62,13 @@ export default function FloatingThemeSwitcher() {
               key={t.key}
               onClick={() => applyTheme(t.key)}
               className="
+              cursor-pointer
                 mt-2
-                px-3 py-1
+                px-1 py-1
                 rounded-full
                 text-sm
-                bg-gray-100
-                hover:bg-gray-200
+                text-primary
+                bg-secondary
                 transition-colors
               "
             >

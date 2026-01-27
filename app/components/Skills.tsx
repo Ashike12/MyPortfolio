@@ -40,8 +40,8 @@ export default function Skills() {
 
     return (
         <div className='felx felx-col px-4'>
-            <h2 className='text-center'>Professional skills</h2>
-            <h2>Skills</h2>
+            <h2 className='text-center text-primary'>Professional skills</h2>
+            <h2 className="text-primary">Skills</h2>
             {PROFILE_INFO.SkillData.map((skill: ISkill, index) => (
                 <motion.div
                     id={skill.id}
@@ -53,7 +53,7 @@ export default function Skills() {
                     className="space-y-2"
                 >
                     <motion.div variants={index % 2 == 0 ? childVariantsLeft : childVariantsRight} className="flex flex-row justify-between pt-3">
-                        <p>{skill.name}</p>
+                        <p className="text-primary">{skill.name}</p>
 
                         {!skill.isIconImage && (
                             <div className="flex flex-row gap-2">
@@ -79,8 +79,8 @@ export default function Skills() {
                     </motion.div>
                 </motion.div>
             ))}
-            <div className='border-[1px] border-[#b7b7b7] mt-10 shadow-[0_0_6px_rgba(34,211,238,0.4)]'></div>
-            <h2 className='pt-5'>Knowledge</h2>
+            <div className='border-[1px] border-primary mt-10 shadow-[0_0_6px_var(--color-secondary-border)'></div>
+            <h2 className='pt-5 text-primary'>Knowledge</h2>
             {PROFILE_INFO.KnowledgeData.map((skill: ISkill, index) => (
                 <motion.div
                     id={skill.id}
@@ -92,7 +92,7 @@ export default function Skills() {
                     className="space-y-2"
                 >
                     <motion.div variants={index % 2 == 0 ? childVariantsLeft : childVariantsRight} className="flex flex-row justify-between pt-3">
-                        <p>{skill.name}</p>
+                        <p className="text-primary">{skill.name}</p>
 
                         {!skill.isIconImage && (
                             <div className="flex flex-row gap-2">

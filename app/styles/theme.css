@@ -1,10 +1,13 @@
 /* Theme class overrides */
 .theme-one {
   --color-primary-bg: #ffffff;
-  --color-secondary-bg: #F9FAFB;
+  --color-secondary-bg: #5d97d4;
+  --color-profile-bg: #46454A;
 
   --color-primary-text: #0b0c0b;
-  --color-secondary-text: #f3f9f7;
+  --color-secondary-text: #cfdbe7;
+  --color-profile-text: #fffeee;
+
 
   --color-primary-border: #b7b7b7;
   --color-secondary-border: #22d3ee66;
@@ -22,45 +25,77 @@
 }
 
 .theme-two {
-  --color-primary-bg: #ffffff;
-  --color-secondary-bg: #F9FAFB;
+  /* Backgrounds */
+  --color-primary-bg: #252525;
+  --color-secondary-bg: #000000;
+  --color-profile-bg: #46454A;
 
-  --color-primary-text: #0b0c0b;
-  --color-secondary-text: #f3f9f7;
+  /* Text */
+  --color-primary-text: #f7fbff;
+  --color-secondary-text: #050505;
+  --color-profile-text: #fffeee;
 
-  --color-primary-border: #b7b7b7;
-  --color-secondary-border: #22d3ee66;
+  /* Borders */
+  --color-primary-border: #fdba74;
+  --color-secondary-border: #fb923c66;
 
-  --color-gradient-1: #ec4899;
-  --color-gradient-2: #a855f7;
-  --color-gradient-3: #3b82f6;
-  --color-gradient-4: #0ea5e9;
-  --color-gradient-5: #22c55e;
+  /* Gradients (cool, premium) */
+  --color-gradient-1: #22d3ee;
+  /* cyan */
+  --color-gradient-2: #38bdf8;
+  /* sky */
+  --color-gradient-3: #6366f1;
+  /* indigo */
+  --color-gradient-4: #8b5cf6;
+  /* violet */
+  --color-gradient-5: #10b981;
+  /* emerald */
   --color-gradient-6: #ef4444;
-  --color-gradient-7: #7a7777;
-  --color-gradient-8: #f97316;
+  /* red */
+  --color-gradient-7: #6b7280;
+  /* neutral gray */
+  --color-gradient-8: #3b82f6;
+  /* blue */
   --color-gradient-9: #eab308;
+  /* yellow accent */
   --color-gradient-10: #06b6d4;
+  /* cyan */
 }
 
 .theme-three {
-  --color-primary-bg: #ffffff;
-  --color-secondary-bg: #F9FAFB;
+  /* Backgrounds */
+  --color-primary-bg: #fff7ed;
+  --color-secondary-bg: #7c2d12;
+  --color-profile-bg: #46454A;
 
-  --color-primary-text: #0b0c0b;
-  --color-secondary-text: #f3f9f7;
+  /* Text */
+  --color-primary-text: #1f2937;
+  --color-secondary-text: #7c2d12;
+  --color-profile-text: #fffeee;
 
-  --color-primary-border: #b7b7b7;
-  --color-secondary-border: #22d3ee66;
+  /* Borders */
+  --color-primary-border: #fdba74;
+  --color-secondary-border: #fb923c66;
 
-  --color-gradient-1: #ec4899;
-  --color-gradient-2: #a855f7;
-  --color-gradient-3: #3b82f6;
-  --color-gradient-4: #0ea5e9;
+  /* Gradients (warm, energetic) */
+  --color-gradient-1: #f97316;
+  /* orange */
+  --color-gradient-2: #fb7185;
+  /* rose */
+  --color-gradient-3: #ef4444;
+  /* red */
+  --color-gradient-4: #f59e0b;
+  /* amber */
   --color-gradient-5: #22c55e;
-  --color-gradient-6: #ef4444;
-  --color-gradient-7: #7a7777;
-  --color-gradient-8: #f97316;
+  /* green contrast */
+  --color-gradient-6: #dc2626;
+  /* deep red */
+  --color-gradient-7: #a8a29e;
+  /* warm gray */
+  --color-gradient-8: #ea580c;
+  /* deep orange */
   --color-gradient-9: #eab308;
-  --color-gradient-10: #06b6d4;
+  /* yellow */
+  --color-gradient-10: #14b8a6;
+  /* teal pop */
 }

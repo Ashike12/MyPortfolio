@@ -12,9 +12,9 @@ export default function Tools() {
                 {PROFILE_INFO.Tools.map((tool) => (
                     <div className="">
                         <AnimatedMuiCard key={tool.id} hoverScale={1.05}>
-                            <div className="flex flex-col justify-center min-h-32">
-                                <h3 className="font-bold px-4 text-center">{tool.name}</h3>
-                                <div className='border-[1px] border-[#b7b7b7] my-2 shadow-[0_0_6px_rgba(34,211,238,0.4)]'></div>
+                            <div className="flex flex-col justify-center min-h-32 bg-primary">
+                                <h3 className="font-bold px-4 text-center text-primary">{tool.name}</h3>
+                                <div className='border-[1px] border-primary my-2 shadow-[0_0_6px_var(--color-secondary-border)'></div>
                                 <div className="flex flex-row gap-3 justify-center">
                                     {tool.icons.map((Icon, index) => (
                                         <Image

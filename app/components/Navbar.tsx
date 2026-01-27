@@ -42,7 +42,7 @@ export default function Navbar(): JSX.Element {
 
       {/* Mobile Navigation */}
       {open && (
-        <div className="md:hidden bg-white border-t border-gray-200">
+        <div className="md:hidden bg-primary border-t border-gray-200">
           <nav className="flex flex-col p-4 gap-4">
             <NavItem href="#home" label="Home"/>
             <NavItem href="#skills" label="Skills"/>

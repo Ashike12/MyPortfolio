@@ -28,15 +28,15 @@ export default function Profile() {
         <motion.div
           initial={{ x: +200, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }} className="bg-[#46454A] max-w-[50%] min-w-[50%] text-white profile-info-animator justify-left items-left flex flex-col px-10 pt-5">
-          <h2>Ashikur Rahman Nabir</h2>
-          <h3 className="italic">Selise Digital Platform. (SELISE)</h3>
-          <h4>Senior Software Engineer</h4>
-          <p>Dotnet | C# | NestJs | Angular | Reactjs | MongoDB | C++ </p>
-          <p>| JavaScript | TypeScript | Git | Cypress | E2E</p>
+          transition={{ duration: 1, ease: "easeOut" }} className="bg-profile max-w-[50%] min-w-[50%] text-white profile-info-animator justify-left items-left flex flex-col px-10 pt-5">
+          <h2 className="text-profile">Ashikur Rahman Nabir</h2>
+          <h3 className="italic text-profile">Selise Digital Platform. (SELISE)</h3>
+          <h4 className="text-profile">Senior Software Engineer</h4>
+          <p className="text-profile">Dotnet | C# | NestJs | Angular | Reactjs | MongoDB | C++ </p>
+          <p className="text-profile">| JavaScript | TypeScript | Git | Cypress | E2E</p>
           <div className="flex felx-row pt-10 pb-5">
-            <div className="w-2 h-4 bg-[#8B6A63] mt-1"></div>
-            <div className="w-4 h-4 text-[#8B6A63] pl-4">CONTACTS</div>
+            <div className="w-2 h-4 bg-secondary mt-1"></div>
+            <div className="w-4 h-4 text-secondary pl-4 text-profile">CONTACTS</div>
           </div>
           <div className="border"></div>
           <div
@@ -44,7 +44,7 @@ export default function Profile() {
             <div className="pt-1">
               <FaPhoneAlt />
             </div>
-            <p className="pl-3">+880 1683800976</p>
+            <p className="pl-3 text-profile">+880 1683800976</p>
           </div>
 
           <div
@@ -52,7 +52,7 @@ export default function Profile() {
             <div className="pt-1">
               <FaEnvelope />
             </div>
-            <p className="pl-3">ashikur.rahmannabir@gmail.com</p>
+            <p className="pl-3 text-profile">ashikur.rahmannabir@gmail.com</p>
           </div>
 
           <div
@@ -60,7 +60,7 @@ export default function Profile() {
             <div className="pt-1">
               <FaMapMarkerAlt />
             </div>
-            <p className="pl-3"> Dori para road, Mahona, Word no - 3, Rupganj, Narayanganj</p>
+            <p className="pl-3 text-profile"> Dori para road, Mahona, Word no - 3, Rupganj, Narayanganj</p>
           </div>
 
           <div
@@ -68,21 +68,21 @@ export default function Profile() {
             <div className="pt-1">
               <FaBirthdayCake />
             </div>
-            <p className="pl-3">1st February 1995</p>
+            <p className="pl-3 text-profile">1st February 1995</p>
           </div>
           <div
             className="flex flex-row pt-3">
             <div className="pt-1">
               <FaGamepad />
             </div>
-            <p className="pl-3">Gaming, Travelling, Gossiping, Problem Solving</p>
+            <p className="pl-3 text-profile">Gaming, Travelling, Gossiping, Problem Solving</p>
           </div>
         </motion.div>
       </div>
       <motion.div
         initial={{ y: +100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, ease: "easeOut" }} className="bg-[#2345ff] h-16 contact-animator gap-8">
+        transition={{ duration: 1, ease: "easeOut" }} className="bg-secondary h-16 contact-animator gap-8">
         <div className="flex flex-row justify-center items-center h-full gap-8">
           {/* LinkedIn */}
           <a href="https://www.linkedin.com/in/ashikur-rahmam-nabir-381085a7" target="_blank" rel="noopener noreferrer" className="text-white text-xl hover:text-gray-200">

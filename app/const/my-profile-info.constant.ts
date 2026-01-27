@@ -47,6 +47,8 @@ import FullStackIcon from './../../public/assets/icons/fullStack.png';
 import SeniorIcon from './../../public/assets/icons/Senior-soft.jpg';
 import ghBoardIcon from './../../public/assets/icons/ghBoard.png';
 import azBoardIcon from './../../public/assets/icons/azBoard.png';
+import RuetIcon from './../../public/assets/icons/ruet.jpg';
+import RUMCIcon from './../../public/assets/icons/rumc.jpg';
 import {
     SiMongodb,
     SiAmazondynamodb,
@@ -224,5 +226,21 @@ export const PROFILE_INFO = {
         { id: 'rabbitmq', name: 'RabbitMQ', icons: [RabbitIcon] },
         { id: 'firebase', name: 'Firebase', icons: [FireBaseIcon] },
         { id: 'datascrap', name: 'data-scrapping', icons: [DataScrapIcon] },
+    ],
+    Education: [
+        {
+            degree: 'Bsc in Computer Science and Enginnering (CSE)',
+            instituteIcon: RuetIcon,
+            institute: 'Rajshahi University of Engineering and Technology(RUET)',
+            studyYear: 'Mar 2013 - Dec 2017',
+            grade: 'Cgpa - 3.48(4)'
+        },
+        {
+            degree: 'Higher Secondary School Certificate (Science)',
+            instituteIcon: RUMCIcon,
+            institute: 'RAJUK Uttara Model College',
+            studyYear: 'Mar 2010 - Dec 2012',
+            grade: 'Gpa - 5.00(5)'
+        }
     ]
 }
