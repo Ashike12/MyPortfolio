@@ -1,8 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
-import ScrollTopIcon from './../../public/assets/icons/scroll-top.svg';
 import IconScrollTop from "@/public/assets/icons/scroll-top";
 
 export default function ScrollToTopButton() {
