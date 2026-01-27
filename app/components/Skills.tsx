@@ -64,8 +64,9 @@ export default function Skills() {
                         )}
                         {skill.isIconImage && (
                             <div className="flex flex-row gap-2">
-                                {skill.icons.map((Icon) => (
+                                {skill.icons.map((Icon, index) => (
                                     <Image
+                                        key={index}
                                         className="w-6"
                                         src={Icon as string}
                                         alt={skill.name}
