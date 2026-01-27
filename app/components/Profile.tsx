@@ -109,8 +109,8 @@ export default function Profile() {
       <div className="pt-20 text-center min-w-full px-20">
         <h2>{PROFILE_INFO.ProfileInfo.BasicDescriptionTitle}</h2>
         <ul className="list-disc list-inside pt-4">
-          {PROFILE_INFO.ProfileInfo.DescriptionList.map((item) =>
-          (<li className="text-primary">
+          {PROFILE_INFO.ProfileInfo.DescriptionList.map((item, index) =>
+          (<li key={index} className="text-primary">
             {item}
           </li>))}
         </ul>
