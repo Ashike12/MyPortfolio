@@ -8,6 +8,7 @@ import {
   FaMapMarkerAlt,
   FaBirthdayCake,
 } from "react-icons/fa";
+import { PROFILE_INFO } from "../const/my-profile-info.constant";
 
 export default function Profile() {
   return (
@@ -22,18 +23,18 @@ export default function Profile() {
           <Image
             className="w-full"
             src={ProfileImage}
-            alt="Ashikur Rahman Nabir"
+            alt={PROFILE_INFO.ProfileInfo.Name}
           />
         </motion.div>
         <motion.div
           initial={{ x: +200, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }} className="bg-profile max-w-[50%] min-w-[50%] text-white profile-info-animator justify-left items-left flex flex-col px-10 pt-5">
-          <h2 className="text-profile">Ashikur Rahman Nabir</h2>
-          <h3 className="italic text-profile">Selise Digital Platform. (SELISE)</h3>
-          <h4 className="text-profile">Senior Software Engineer</h4>
-          <p className="text-profile">Dotnet | C# | NestJs | Angular | Reactjs | MongoDB | C++ </p>
-          <p className="text-profile">| JavaScript | TypeScript | Git | Cypress | E2E</p>
+          <h2 className="text-profile">{PROFILE_INFO.ProfileInfo.Name}</h2>
+          <h3 className="italic text-profile">{PROFILE_INFO.ProfileInfo.CurrentCompanyName}</h3>
+          <h4 className="text-profile">{PROFILE_INFO.ProfileInfo.Designation}</h4>
+          <p className="text-profile">{PROFILE_INFO.ProfileInfo.SkillSet1}</p>
+          <p className="text-profile">{PROFILE_INFO.ProfileInfo.SkillSet2}</p>
           <div className="flex felx-row pt-10 pb-5">
             <div className="w-2 h-4 bg-secondary mt-1"></div>
             <div className="w-4 h-4 text-secondary pl-4 text-profile">CONTACTS</div>
@@ -44,7 +45,7 @@ export default function Profile() {
             <div className="pt-1">
               <FaPhoneAlt />
             </div>
-            <p className="pl-3 text-profile">+880 1683800976</p>
+            <p className="pl-3 text-profile">{PROFILE_INFO.ProfileInfo.Phone}</p>
           </div>
 
           <div
@@ -52,7 +53,7 @@ export default function Profile() {
             <div className="pt-1">
               <FaEnvelope />
             </div>
-            <p className="pl-3 text-profile">ashikur.rahmannabir@gmail.com</p>
+            <p className="pl-3 text-profile">{PROFILE_INFO.ProfileInfo.Email}</p>
           </div>
 
           <div
@@ -60,7 +61,7 @@ export default function Profile() {
             <div className="pt-1">
               <FaMapMarkerAlt />
             </div>
-            <p className="pl-3 text-profile"> Dori para road, Mahona, Word no - 3, Rupganj, Narayanganj</p>
+            <p className="pl-3 text-profile"> {PROFILE_INFO.ProfileInfo.Address}</p>
           </div>
 
           <div
@@ -68,14 +69,14 @@ export default function Profile() {
             <div className="pt-1">
               <FaBirthdayCake />
             </div>
-            <p className="pl-3 text-profile">1st February 1995</p>
+            <p className="pl-3 text-profile">{PROFILE_INFO.ProfileInfo.BirthDay}</p>
           </div>
           <div
             className="flex flex-row pt-3">
             <div className="pt-1">
               <FaGamepad />
             </div>
-            <p className="pl-3 text-profile">Gaming, Travelling, Gossiping, Problem Solving</p>
+            <p className="pl-3 text-profile">{PROFILE_INFO.ProfileInfo.Hobby}</p>
           </div>
         </motion.div>
       </div>
@@ -106,34 +107,12 @@ export default function Profile() {
         </div>
       </motion.div>
       <div className="pt-20 text-center min-w-full px-20">
-        <h2>Hi, I am Ashikur Rahman Nabir</h2>
+        <h2>{PROFILE_INFO.ProfileInfo.BasicDescriptionTitle}</h2>
         <ul className="list-disc list-inside pt-4">
-          <li>
-            Over the years, I’ve learned technical experience enough and i think it alone isn’t enough — it’s how we lead, collaborate, and communicate that truly drives success.
-          </li>
-          <li>
-            In many South Asian workplaces, appreciation often takes a back seat — mistakes are highlighted more than effort.
-            But I believe real leadership isn’t about power or control, it’s about empathy, guidance, and trust.
-          </li>
-          <li>
-            As a senior software engineer, I see my role not just as a coder, but as a mentor and a leader.
-          </li>
-          <li>
-            I can’t be the kind of boss who pressures people, even if a project faces loss.
-            Because leadership, to me, means standing beside your team, not above them.
-            I prefer to fix systems, not blame people — to focus on improvement, not intimidation.
-          </li>
-          <li>
-            When people feel valued and respected, they naturally deliver their best work.
-            That’s the environment I aim to build — whether I’m writing code, mentoring developers, or leading a project from concept to deployment.
-          </li>
-          <li>
-            Because when people feel trusted, they don’t just work — they thrive.
-          </li>
-          <li>
-            Core Skills:
-            Senior Software Engineer | Dotnet | C# | Angular | Reactjs | MongoDB | C++ | JavaScript | TypeScript | Git | Problem Solving | Cypress | E2E
-          </li>
+          {PROFILE_INFO.ProfileInfo.DescriptionList.map((item) =>
+          (<li className="text-primary">
+            {item}
+          </li>))}
         </ul>
       </div>
     </div >

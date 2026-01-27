@@ -58,6 +58,28 @@ import {
 import { FaHeadset, FaChartLine, FaQrcode, FaUsersCog, FaUserShield, FaProjectDiagram, FaLock, FaStore, FaCode } from "react-icons/fa";
 
 export const PROFILE_INFO = {
+    ProfileInfo: {
+        Name: 'Ashikur Rahman Nabir',
+        CurrentCompanyName: 'Selise Digital Platform. (SELISE)',
+        Designation: 'Senior Software Engineer',
+        SkillSet1: 'Dotnet | C# | NestJs | Angular | Reactjs | MongoDB | C++ ',
+        SkillSet2: '| JavaScript | TypeScript | Git | Cypress | E2E',
+        Phone: '+880 1683800976',
+        Email: 'ashikur.rahmannabir@gmail.com',
+        Address: 'Dori para road, Mahona, Word no - 3, Rupganj, Narayanganj',
+        BirthDay: '1st February 1995',
+        Hobby: 'Gaming, Travelling, Gossiping, Problem Solving',
+        BasicDescriptionTitle: 'Hi, I am Ashikur Rahman Nabir',
+        DescriptionList: [
+            'Over the years, I’ve learned technical experience enough and i think it alone isn’t enough — it’s how we lead, collaborate, and communicate that truly drives success.',
+            'In many South Asian workplaces, appreciation often takes a back seat — mistakes are highlighted more than effort. But I believe real leadership isn’t about power or control, it’s about empathy, guidance, and trust.',
+            'As a senior software engineer, I see my role not just as a coder, but as a mentor and a leader.',
+            'I can’t be the kind of boss who pressures people, even if a project faces loss. Because leadership, to me, means standing beside your team, not above them. I prefer to fix systems, not blame people — to focus on improvement, not intimidation.',
+            'When people feel valued and respected, they naturally deliver their best work. That’s the environment I aim to build — whether I’m writing code, mentoring developers, or leading a project from concept to deployment.',
+            'Because when people feel trusted, they don’t just work — they thrive.',
+            'Core Skills: Senior Software Engineer | Dotnet | C# | Angular | Reactjs | MongoDB | C++ | JavaScript | TypeScript | Git | Problem Solving | Cypress | E2E'
+        ]
+    },
     ProjectData: [
         {
             id: '11',

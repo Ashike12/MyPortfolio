@@ -4,10 +4,11 @@ import Navbar from "./components/Navbar";
 import { JSX } from "react";
 import FloatingThemeSwitcher from "./components/FloatingThemeSwitcher";
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import { PROFILE_INFO } from "./const/my-profile-info.constant";
 
 export const metadata: Metadata = {
-  title: "Ashikur Rahman Nabir",
-  description: "Senior Software Engineer Portfolio",
+  title: PROFILE_INFO.ProfileInfo.Name,
+  description: PROFILE_INFO.ProfileInfo.Designation,
 };
 
 export default function RootLayout({

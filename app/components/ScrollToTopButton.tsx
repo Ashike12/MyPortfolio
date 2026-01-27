@@ -24,7 +24,7 @@ export default function ScrollToTopButton() {
       aria-label="Scroll to top"
       className={`
         cursor-pointer
-        fixed bottom-12 right-6 z-10
+        fixed bottom-14 right-6 z-10
         w-10 h-10 rounded-full
         bg-secondary
         shadow-lg
