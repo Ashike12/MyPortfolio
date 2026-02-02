@@ -3,6 +3,7 @@
   --color-primary-bg: #ffffff;
   --color-secondary-bg: #5d97d4;
   --color-profile-bg: #46454A;
+  --color-header-bg: #ffffffcc;
 
   --color-primary-text: #0b0c0b;
   --color-secondary-text: #cfdbe7;
@@ -29,6 +30,7 @@
   --color-primary-bg: #252525;
   --color-secondary-bg: #000000;
   --color-profile-bg: #46454A;
+  --color-header-bg: #252525aa;
 
   /* Text */
   --color-primary-text: #f7fbff;
@@ -67,9 +69,10 @@
   --color-primary-bg: #fff7ed;
   --color-secondary-bg: #7c2d12;
   --color-profile-bg: #46454A;
+  --color-header-bg: #fff7edbb;
 
   /* Text */
-  --color-primary-text: #1f2937;
+  --color-primary-text: #0000000;
   --color-secondary-text: #7c2d12;
   --color-profile-text: #fffeee;
 

@@ -32,7 +32,7 @@ export default function ScrollToTopButton() {
       `}
     >
       <div className="arrow-float">
-        <IconScrollTop size={24} />
+        <IconScrollTop className="text-[var(--text-primary)]" size={24} />
       </div>
     </button>
   );

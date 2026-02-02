@@ -7,7 +7,7 @@ export default function Tools() {
     
     return (
         <div className='felx felx-col p-4'>
-            <h2 className='text-center'>Tools</h2>
+            <h2 className='text-center text-float text-primary'>Tools</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-2 gap-x-6 pt-5">
                 {PROFILE_INFO.Tools.map((tool) => (
                     <div className="">

@@ -17,7 +17,7 @@ export default function IconScrollTop({
             fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"
             {...props}>
-            <path d="M4 8l5 -5l5 5l-1 1l-4 -4l-4 4ZM4 12l5 -5l5 5l-1 1l-4 -4l-4 4Z" fill={color} />
+            <path d="M4 8l5 -5l5 5l-1 1l-4 -4l-4 4ZM4 12l5 -5l5 5l-1 1l-4 -4l-4 4Z" />
         </svg>
     );
 }

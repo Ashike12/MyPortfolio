@@ -6,7 +6,7 @@ export default function Education() {
     
     return (
         <div className='felx felx-col p-4'>
-            <h2 className='text-center pb-4'>Education</h2>
+            <h2 className='text-center pb-4 text-float'>Education</h2>
             <AnimatedMuiCard key={'tool.id'} hoverScale={1.02} startY={0} endY={0} startX={200} endX={0} duration={1}>
                 <div className="flex flex-col justify-center min-h-32 p-4 bg-primary">
                     {PROFILE_INFO.Education.map((edu, index) =>

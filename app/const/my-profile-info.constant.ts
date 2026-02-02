@@ -238,8 +238,8 @@ export const PROFILE_INFO = {
     ],
     Tools: [
         { id: 'vsstudio', name: 'VS Studio', icons: [vsIcon, vsCodeIcon] },
-        { id: 'postmaninsomnia', name: 'Postman/Insomnia', icons: [postmanIcon, insomniaIcon] },
-        { id: 'dockerkub', name: 'Docker/Kuberneter', icons: [dockerIcon, kuberIcon] },
+        { id: 'postmaninsomnia', name: 'Postman, Insomnia', icons: [postmanIcon, insomniaIcon] },
+        { id: 'dockerkub', name: 'Docker, Kuberneter', icons: [dockerIcon, kuberIcon] },
         { id: 'source-control', name: 'Source control', icons: [gitIcon, sourceTreeIcon, gitKrakenIcon, bitbucketIcon] },
         { id: 'project-board', name: 'Sprints and Agile', icons: [ghBoardIcon, azBoardIcon, bitbucketIcon] },
         { id: 'iisserver', name: 'IIS', icons: [IIsIcon] },

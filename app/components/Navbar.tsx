@@ -13,10 +13,10 @@ export default function Navbar(): JSX.Element {
   const [open, setOpen] = useState<boolean>(false);
 
   return (
-    <header className="fixed top-0 left-0 w-screen z-50 bg-white/80 backdrop-blur border-b border-gray-200">
+    <header className="fixed top-0 left-0 w-screen z-50 bg-header backdrop-blur border-b border-gray-200">
       <div className=" mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo / Name */}
-        <Link href="/" className="text-xl font-bold">
+        <Link href="/" className="text-xl font-bold text-primary">
           Ashikur Rahman Nabir
         </Link>
 
@@ -62,7 +62,7 @@ function NavItem({ href, label, onClick }: NavItemProps): JSX.Element {
     <Link
       href={href}
       onClick={onClick}
-      className="text-gray-700 hover:text-blue-500 transition-colors"
+      className="text-primary hover:text-blue-500 transition-colors"
     >
       {label}
     </Link>

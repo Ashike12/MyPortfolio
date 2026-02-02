@@ -7,7 +7,7 @@ export default function Projects() {
 
     return (
         <div className='felx felx-col p-4'>
-            <h2 className='text-center text-primary'>Projects</h2>
+            <h2 className='text-center text-primary text-float'>Projects</h2>
             {PROFILE_INFO.ProjectData.map((exp, index) =>
             (<div id={exp.id} key={exp.id}
                 className="flex flex-row gap-0 pt-4">

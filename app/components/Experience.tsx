@@ -5,7 +5,7 @@ import { PROFILE_INFO } from "../const/my-profile-info.constant";
 export default function Experience() {
     return (
         <div className='felx felx-col p-4'>
-            <h2 className='text-center text-primary'>Experiences</h2>
+            <h2 className='text-center text-primary text-float'>Experiences</h2>
             {PROFILE_INFO.ExperienceList.map((exp) =>
             (<div id={exp.id} key={exp.id}
                 className="flex flex-row gap-0 pt-4">

@@ -40,7 +40,7 @@ export default function Skills() {
 
     return (
         <div className='felx felx-col px-4'>
-            <h2 className='text-center text-primary'>Professional skills</h2>
+            <h2 className='text-center text-primary text-float'>Professional skills</h2>
             <h2 className="text-primary">Skills</h2>
             {PROFILE_INFO.SkillData.map((skill: ISkill, index) => (
                 <motion.div
