@@ -27,7 +27,7 @@ export default function Projects() {
                                 <h3 className="font-bold flex-[19] text-primary">{index + 1 + ': ' + exp.title}</h3>
                                 {exp.link && (
                                     <a href={exp.link} target="_blank" rel="noopener noreferrer" className="text-primary pt-1 text-orange-500 text-xl hover:text-black-500">
-                                        <FaExternalLinkAlt />
+                                        <FaExternalLinkAlt className="text-[var(--color-primary-text)]" />
                                     </a>
                                 )}
                             </div>

@@ -55,7 +55,7 @@ import {
     SiMysql,
     SiOracle,
 } from "react-icons/si";
-import { FaHeadset, FaChartLine, FaQrcode, FaUsersCog, FaUserShield, FaProjectDiagram, FaLock, FaStore, FaCode } from "react-icons/fa";
+import { FaHeadset, FaChartLine, FaQrcode, FaUsersCog, FaUserShield, FaProjectDiagram, FaLock, FaStore, FaCode, FaBriefcase } from "react-icons/fa";
 
 export const PROFILE_INFO = {
     ProfileInfo: {
@@ -190,6 +190,17 @@ export const PROFILE_INFO = {
                 'The platform also maintains a complete submission history for each user, allowing them to track attempts, review past solutions, and monitor progress over time. The system was designed with a focus on usability, transparency of evaluation, and extensibility for future automation of code execution and grading.',
             ],
             skills: ['Angular · Node.js · MongoDB · Problem Solving']
+        },
+        {
+            id: '20',
+            title: 'Config-Driven Portfolio Template',
+            icon: FaBriefcase, duration: 'personal project',
+            link: 'https://github.com/Ashike12/MyPortfolio',
+            description: [
+                'A modern, fully responsive personal portfolio template built with Next.js, React, and Tailwind CSS, designed to be easily reusable by anyone. The project is architected around a single configuration file, allowing users to generate their own portfolio by simply updating profile data, projects, experience, and links—without touching the core codebase.',
+                'The template follows clean component architecture, supports fast performance via Next.js optimizations, and emphasizes maintainability and scalability. It is suitable for developers, designers, and professionals who want a customizable yet production-ready personal website with minimal setup.',
+            ],
+            skills: ['Next.js · Tailwind CSS · React.js']
         },
     ],
     ExperienceList: [
