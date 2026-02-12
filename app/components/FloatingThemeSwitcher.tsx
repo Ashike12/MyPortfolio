@@ -10,6 +10,7 @@ const THEMES = [
 
 export default function FloatingThemeSwitcher() {
   const [theme, setTheme] = useState("theme-one");
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const saved = localStorage.getItem("theme") || "theme-one";
@@ -21,14 +22,16 @@ export default function FloatingThemeSwitcher() {
     document.documentElement.className = newTheme;
     setTheme(newTheme);
     localStorage.setItem("theme", newTheme);
+    setOpen(false); // close after selection
   };
 
   const currentLabel =
     THEMES.find((t) => t.key === theme)?.label ?? "Theme";
 
   return (
-    <div className="fixed bottom-4 right-4 z-50 group w-14">
+    <div className="fixed bottom-4 right-4 z-50 w-14">
       <div
+        onClick={() => setOpen((o) => !o)}
         className="
           bg-secondary
           border border-gray-300
@@ -37,32 +40,30 @@ export default function FloatingThemeSwitcher() {
           p-1
           cursor-pointer
           transition-all duration-200
-          group-hover:rounded-xl
         "
       >
-        {/* Current theme (always visible) */}
+        {/* Current theme */}
         <div className="text-sm font-medium text-center text-primary">
           {currentLabel}
         </div>
 
-        {/* Expanded list (vertical) */}
+        {/* Dropdown */}
         <div
-          className="
+          className={`
             overflow-hidden
-            max-h-0
             transition-all duration-200
-            group-hover:max-h-40
             flex flex-col
-            mt-0
-            group-hover:mt-3
-          "
+            ${open ? "max-h-40 mt-3" : "max-h-0 mt-0"}
+          `}
         >
           {THEMES.filter((t) => t.key !== theme).map((t) => (
             <button
               key={t.key}
-              onClick={() => applyTheme(t.key)}
+              onClick={(e) => {
+                e.stopPropagation(); // prevent toggle conflict
+                applyTheme(t.key);
+              }}
               className="
-              cursor-pointer
                 mt-2
                 px-1 py-1
                 rounded-full

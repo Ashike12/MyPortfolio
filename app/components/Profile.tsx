@@ -13,12 +13,12 @@ import { PROFILE_INFO } from "../const/my-profile-info.constant";
 export default function Profile() {
   return (
     <div className="felx felx-col pt-20">
-      <div className="flex flex-row w-full">
+      <div className="flex flex-col md:flex-row w-full">
         <motion.div
           initial={{ x: -200, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="image-animator flex justify-center items-center max-w-[50%] min-w-[50%]"
+          className="image-animator flex justify-center items-center max-w-[100%] min-w-[100%] md:max-w-[50%] md:min-w-[50%]"
         >
           <Image
             className="w-full"
@@ -29,7 +29,7 @@ export default function Profile() {
         <motion.div
           initial={{ x: +200, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }} className="bg-profile max-w-[50%] min-w-[50%] text-white profile-info-animator justify-left items-left flex flex-col px-10 pt-5">
+          transition={{ duration: 1, ease: "easeOut" }} className="bg-profile max-w-[100%] min-w-[100%] md:max-w-[50%] md:min-w-[50%] text-white profile-info-animator justify-left items-left flex flex-col px-10 pt-5">
           <h2 className="text-profile">{PROFILE_INFO.ProfileInfo.Name}</h2>
           <h3 className="italic text-profile">{PROFILE_INFO.ProfileInfo.CurrentCompanyName}</h3>
           <h4 className="text-profile">{PROFILE_INFO.ProfileInfo.Designation}</h4>
