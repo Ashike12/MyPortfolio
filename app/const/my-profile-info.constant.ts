@@ -139,7 +139,7 @@ export const PROFILE_INFO = {
                 'To ensure accuracy and prevent unauthorized access, I created a Cypress test suite that automatically logged in with each role and verified the presence and absence of corresponding menus and sub-menus. The tests were designed not only to confirm allowed access but also to detect any extra or unintended menu visibility that could indicate permission leaks. Beyond automated assertions, I generated a role-versus-menu truth table using only HTML and CSS, rendered directly in the browser. The table visualized both allowed and disallowed states, with roles represented along one axis and menu and sub-menu items along the other, making permission validation transparent and easy to review for developers and stakeholders.',
                 'This approach significantly improved confidence in the role-based access system, reduced manual regression testing effort, and provided a clear, visual reference for ongoing permission audits and future feature development.'
             ],
-            skills: ['React.Js', 'Tailwind CSS', 'State Management', 'Insurance']
+            skills: ['Cypress', 'Test Automation', 'RBAC', 'HTML', 'CSS']
         },
         {
             id: '16',
@@ -158,9 +158,9 @@ export const PROFILE_INFO = {
             icon: FaLock, duration: 'personal project',
             link: 'https://github.com/Ashike12/store-management-node/blob/main/src/auth',
             description: [
-                'Designed and developed a comprehensive workflow management system for the insurance domain, enabling end-to-end digital processing of complex business workflows. The platform supports KYC forms and insurance policy application workflows consisting of 30+ dynamic pages, executed through step-by-step, condition-based workflows.',
-                'Implemented a configurable workflow engine using .NET Core, allowing new insurance applications to be onboarded by simply inserting configuration data—without requiring code changes. Business users can design and manage form pages while reusing the same underlying workflow engine.',
-                'Built a robust PDF generation system using HiQPDF, enabling dynamic PDF creation from submitted forms. Custom PDF templates were designed to meet regulatory and business requirements, ensuring accurate document generation for insurance applications and records.',
+                'Designed and implemented a reusable authentication and authorization microservice using NestJS and Express.js, built to be easily integrated across multiple applications and systems.',
+                'Implemented a secure JWT-based authentication system with password hashing, ensuring safe user credential management. Developed a fine-grained permission and role-based access control (RBAC) system, allowing precise control over CRUD operations—users without proper permissions are restricted from creating, updating, or deleting data.',
+                'The service enforces authorization at the API level, ensuring that only authorized users can perform sensitive operations. Built with a microservice architecture, the solution is decoupled, scalable, and can be plugged into any application requiring centralized authentication and authorization.'
             ],
             skills: ['NestJS · Express.js · Role-Based Access Control (RBAC) · Microservices · MongoDB']
         },
