@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { JSX, useState } from "react";
+import { FiDownload } from "react-icons/fi";
 
 type NavItemProps = {
   href: string;
@@ -28,6 +29,14 @@ export default function Navbar(): JSX.Element {
           <NavItem href="#experiences" label="Experiences" />
           <NavItem href="#projects" label="Projects" />
           <NavItem href="#education" label="Education" />
+          <a
+            href="./assets/pdf/ashikur_rahman.pdf"
+            target="_blank"
+            className="flex items-center gap-2 text-primary hover:text-blue-500 transition-colors"
+          >
+            <FiDownload size={16} />
+            Resume
+          </a>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -44,12 +53,20 @@ export default function Navbar(): JSX.Element {
       {open && (
         <div className="md:hidden bg-primary border-t border-gray-200">
           <nav className="flex flex-col p-4 gap-4">
-            <NavItem href="#home" label="Home"/>
-            <NavItem href="#skills" label="Skills"/>
+            <NavItem href="#home" label="Home" />
+            <NavItem href="#skills" label="Skills" />
             <NavItem href="#tools" label="Tools" />
-            <NavItem href="#experiences" label="Experiences"/>
-            <NavItem href="#projects" label="Projects"/>
-            <NavItem href="#education" label="Education"/>
+            <NavItem href="#experiences" label="Experiences" />
+            <NavItem href="#projects" label="Projects" />
+            <NavItem href="#education" label="Education" />
+            <a
+            href="./assets/pdf/ashikur_rahman.pdf"
+            target="_blank"
+            className="flex items-center gap-2 text-primary hover:text-blue-500 transition-colors"
+          >
+            <FiDownload size={16} />
+            Resume
+          </a>
           </nav>
         </div>
       )}
