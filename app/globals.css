@@ -121,7 +121,6 @@ h4 {
     width: 84px;
     height: 84px;
     background: radial-gradient(circle at 30% 30%, hsl(0 0% 100% / 0.95), color-mix(in srgb, var(--color-gradient-8) 90%, white) 32%, color-mix(in srgb, var(--color-gradient-1) 88%, black) 66%, transparent 80%);
-    animation: portfolio-orb-float-one 11s linear infinite;
   }
 
   .portfolio-orb-two {
@@ -130,7 +129,6 @@ h4 {
     width: 118px;
     height: 118px;
     background: radial-gradient(circle at 35% 35%, hsl(0 0% 100% / 0.85), color-mix(in srgb, var(--color-gradient-10) 86%, white) 26%, color-mix(in srgb, var(--color-gradient-8) 85%, black) 60%, transparent 80%);
-    animation: portfolio-orb-float-two 14s linear infinite;
   }
 
   .portfolio-orb-three {
@@ -139,7 +137,6 @@ h4 {
     width: 64px;
     height: 64px;
     background: radial-gradient(circle at 35% 35%, hsl(0 0% 100% / 0.88), color-mix(in srgb, var(--color-gradient-2) 84%, white) 26%, color-mix(in srgb, var(--color-gradient-3) 86%, black) 62%, transparent 80%);
-    animation: portfolio-orb-float-three 9s linear infinite;
   }
 
   .portfolio-orb-four {
@@ -148,37 +145,8 @@ h4 {
     width: 96px;
     height: 96px;
     background: radial-gradient(circle at 30% 30%, hsl(0 0% 100% / 0.82), color-mix(in srgb, var(--color-gradient-5) 84%, white) 28%, color-mix(in srgb, var(--color-gradient-4) 82%, black) 64%, transparent 80%);
-    animation: portfolio-orb-float-four 13s linear infinite;
   }
 }
-
-@keyframes portfolio-orb-float-one {
-  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
-  25% { transform: translate3d(32px, -18px, 0) scale(1.05); }
-  50% { transform: translate3d(18px, 20px, 0) scale(0.98); }
-  75% { transform: translate3d(-22px, 10px, 0) scale(1.03); }
-}
-
-@keyframes portfolio-orb-float-two {
-  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
-  25% { transform: translate3d(-28px, 16px, 0) scale(1.05); }
-  50% { transform: translate3d(-14px, -20px, 0) scale(0.97); }
-  75% { transform: translate3d(20px, -8px, 0) scale(1.02); }
-}
-
-@keyframes portfolio-orb-float-three {
-  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
-  33% { transform: translate3d(16px, 22px, 0) scale(1.08); }
-  66% { transform: translate3d(-18px, -14px, 0) scale(0.96); }
-}
-
-@keyframes portfolio-orb-float-four {
-  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
-  20% { transform: translate3d(22px, -16px, 0) scale(1.03); }
-  55% { transform: translate3d(-26px, 14px, 0) scale(0.98); }
-  80% { transform: translate3d(12px, 18px, 0) scale(1.05); }
-}
-
 
 /* Mixed Cool Gradient Scrollbar */
 ::-webkit-scrollbar {

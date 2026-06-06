@@ -14,7 +14,7 @@ function normalizeTheme(value: string | null): ThemeKey {
 }
 
 export default function FloatingThemeSwitcher() {
-  const [theme, setTheme] = useState(() => {
+  const [theme, setTheme] = useState<ThemeKey>(() => {
     if (typeof window === "undefined") {
       return "theme-one";
     }
@@ -24,7 +24,8 @@ export default function FloatingThemeSwitcher() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    document.documentElement.className = theme;
+    document.documentElement.classList.remove("theme-one", "theme-two");
+    document.documentElement.classList.add(theme);
     localStorage.setItem("theme", theme);
   }, [theme]);
 
@@ -33,11 +34,10 @@ export default function FloatingThemeSwitcher() {
     setOpen(false);
   };
 
-  const currentLabel =
-    THEMES.find((t) => t.key === theme)?.label ?? "Theme";
+  const currentLabel = THEMES.find((t) => t.key === theme)?.label ?? "Theme";
 
   return (
-    <div data-site-chrome="theme" className="fixed bottom-4 right-4 z-50 w-14">
+    <div data-site-chrome="theme" suppressHydrationWarning className="fixed bottom-4 right-4 z-50 w-14">
       <div
         onClick={() => setOpen((o) => !o)}
         className="
