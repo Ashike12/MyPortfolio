@@ -5,8 +5,13 @@ import { useEffect, useState } from "react";
 const THEMES = [
   { key: "theme-one", label: "light" },
   { key: "theme-two", label: "dark" },
-  { key: "theme-three", label: "other" },
 ] as const;
+
+type ThemeKey = (typeof THEMES)[number]["key"];
+
+function normalizeTheme(value: string | null): ThemeKey {
+  return value === "theme-two" ? "theme-two" : "theme-one";
+}
 
 export default function FloatingThemeSwitcher() {
   const [theme, setTheme] = useState(() => {
@@ -14,7 +19,7 @@ export default function FloatingThemeSwitcher() {
       return "theme-one";
     }
 
-    return localStorage.getItem("theme") || "theme-one";
+    return normalizeTheme(localStorage.getItem("theme"));
   });
   const [open, setOpen] = useState(false);
 
@@ -23,7 +28,7 @@ export default function FloatingThemeSwitcher() {
     localStorage.setItem("theme", theme);
   }, [theme]);
 
-  const applyTheme = (newTheme: string) => {
+  const applyTheme = (newTheme: ThemeKey) => {
     setTheme(newTheme);
     setOpen(false);
   };

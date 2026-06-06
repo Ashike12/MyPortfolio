@@ -1,28 +1,28 @@
 /* Theme class overrides */
 .theme-one {
-  --color-primary-bg: #ffffff;
-  --color-secondary-bg: #5d97d4;
+  /* Light theme now uses the former warm/other palette */
+  --color-primary-bg: #fff7ed;
+  --color-secondary-bg: #7c2d12;
   --color-profile-bg: #46454A;
-  --color-header-bg: #ffffffcc;
+  --color-header-bg: #fff7edbb;
 
-  --color-primary-text: #0b0c0b;
-  --color-secondary-text: #cfdbe7;
+  --color-primary-text: #000000;
+  --color-secondary-text: #7c2d12;
   --color-profile-text: #fffeee;
 
+  --color-primary-border: #fdba74;
+  --color-secondary-border: #fb923c66;
 
-  --color-primary-border: #b7b7b7;
-  --color-secondary-border: #22d3ee66;
-
-  --color-gradient-1: #ec4899;
-  --color-gradient-2: #a855f7;
-  --color-gradient-3: #3b82f6;
-  --color-gradient-4: #0ea5e9;
+  --color-gradient-1: #f97316;
+  --color-gradient-2: #fb7185;
+  --color-gradient-3: #ef4444;
+  --color-gradient-4: #f59e0b;
   --color-gradient-5: #22c55e;
-  --color-gradient-6: #ef4444;
-  --color-gradient-7: #7a7777;
-  --color-gradient-8: #f97316;
+  --color-gradient-6: #dc2626;
+  --color-gradient-7: #a8a29e;
+  --color-gradient-8: #ea580c;
   --color-gradient-9: #eab308;
-  --color-gradient-10: #06b6d4;
+  --color-gradient-10: #14b8a6;
 }
 
 .theme-two {
@@ -62,43 +62,4 @@
   /* yellow accent */
   --color-gradient-10: #06b6d4;
   /* cyan */
-}
-
-.theme-three {
-  /* Backgrounds */
-  --color-primary-bg: #fff7ed;
-  --color-secondary-bg: #7c2d12;
-  --color-profile-bg: #46454A;
-  --color-header-bg: #fff7edbb;
-
-  /* Text */
-  --color-primary-text: #000000;
-  --color-secondary-text: #7c2d12;
-  --color-profile-text: #fffeee;
-
-  /* Borders */
-  --color-primary-border: #fdba74;
-  --color-secondary-border: #fb923c66;
-
-  /* Gradients (warm, energetic) */
-  --color-gradient-1: #f97316;
-  /* orange */
-  --color-gradient-2: #fb7185;
-  /* rose */
-  --color-gradient-3: #ef4444;
-  /* red */
-  --color-gradient-4: #f59e0b;
-  /* amber */
-  --color-gradient-5: #22c55e;
-  /* green contrast */
-  --color-gradient-6: #dc2626;
-  /* deep red */
-  --color-gradient-7: #a8a29e;
-  /* warm gray */
-  --color-gradient-8: #ea580c;
-  /* deep orange */
-  --color-gradient-9: #eab308;
-  /* yellow */
-  --color-gradient-10: #14b8a6;
-  /* teal pop */
 }
