@@ -1,83 +1,152 @@
-"use client"; // <-- MUST be first line
+"use client";
+
 import AnimatedMuiCard from "./custom/AnimatedMuiCard";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { PROFILE_INFO } from "../const/my-profile-info.constant";
-import { useEffect, useState } from "react";
 
-function useIsMobile() {
-  const [isMobile, setIsMobile] = useState(false);
+type ProjectItem = (typeof PROFILE_INFO.ProjectData)[number];
+type ProjectReference = {
+  label: string;
+  href: string;
+  note?: string;
+};
 
-  useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 768);
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
-  }, []);
+type ProjectWithExtras = ProjectItem & {
+  references?: ProjectReference[];
+};
 
-  return isMobile;
+function ProjectCard({ project, featured = false }: { project: ProjectWithExtras; featured?: boolean }) {
+  const Icon = project.icon;
+
+  return (
+    <AnimatedMuiCard hoverScale={featured ? 1.02 : 1.01} startX={featured ? 120 : 80} duration={0.8}>
+      <div className="flex h-full flex-col bg-[var(--color-primary-bg)] p-5 sm:p-6">
+        <div className="flex items-start justify-between gap-4">
+          <div className="flex items-start gap-3">
+            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-secondary text-white shadow-lg shadow-black/15">
+              <Icon size={22} />
+            </div>
+            <div>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-secondary">
+                {project.category}
+              </p>
+              <h3 className="mt-2 text-xl font-black leading-snug text-primary">{project.title}</h3>
+            </div>
+          </div>
+
+          {project.link && (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${project.title} link`}
+            className="rounded-full border border-[var(--color-primary-border)] p-2 text-primary transition-transform duration-200 hover:-translate-y-0.5 hover:bg-white/10"
+          >
+            <FaExternalLinkAlt />
+          </a>
+          )}
+        </div>
+
+        <div className="mt-4 flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-secondary">
+          <span className="rounded-full border border-[var(--color-primary-border)] bg-white/5 px-3 py-1">
+            {project.duration}
+          </span>
+          <span className="rounded-full border border-[var(--color-primary-border)] bg-white/5 px-3 py-1">
+            {project.role}
+          </span>
+        </div>
+
+        <p className="mt-4 text-sm leading-7 text-primary opacity-80">{project.summary}</p>
+        <p className="mt-4 rounded-2xl border border-[var(--color-primary-border)] bg-black/10 p-4 text-sm leading-7 text-primary opacity-85">
+          {project.impact}
+        </p>
+
+        {project.references?.length ? (
+          <div className="mt-5">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-secondary">
+              Reference links
+            </p>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {project.references.map((reference) => (
+                <a
+                  key={reference.label}
+                  href={reference.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-[var(--color-primary-border)] bg-black/10 px-3 py-2 text-sm transition-transform duration-200 hover:-translate-y-0.5 hover:bg-white/10"
+                >
+                  <span className="font-semibold text-primary">{reference.label}</span>
+                  {reference.note && (
+                    <span className="text-xs text-primary opacity-75">{reference.note}</span>
+                  )}
+                </a>
+              ))}
+            </div>
+          </div>
+        ) : null}
+
+        <ul className="mt-5 space-y-3">
+          {project.description.map((item) => (
+            <li key={item} className="flex gap-3 text-sm leading-6 text-primary opacity-80">
+              <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-secondary" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+
+        <div className="mt-6 flex flex-wrap gap-2">
+          {project.skills.map((skill) => (
+            <span
+              key={skill}
+              className="rounded-full border border-[var(--color-primary-border)] bg-white/5 px-3 py-1 text-xs font-medium text-primary"
+            >
+              {skill}
+            </span>
+          ))}
+        </div>
+      </div>
+    </AnimatedMuiCard>
+  );
 }
 
 export default function Projects() {
-const isMobile = useIsMobile();
-    return (
-        <div className='felx felx-col p-4'>
-            <h2 className='text-center text-primary text-float'>Projects</h2>
-            {PROFILE_INFO.ProjectData.map((exp, index) =>
-            (<div id={exp.id} key={exp.id}
-                className="flex flex-row gap-0 pt-4">
-                <div className="flex-[1] flex-col">
-                    <div className="relative flex justify-center">
-                        <exp.icon className="text-blue-500" size={24} />
+  const featuredProjects = PROFILE_INFO.ProjectData.filter((project) => project.featured) as ProjectWithExtras[];
+  const otherProjects = PROFILE_INFO.ProjectData.filter((project) => !project.featured) as ProjectWithExtras[];
 
-                    </div>
-                    <div className="flex-1 w-full h-full flex justify-center mt-0">
-                        <div className="border-l-2 border-dashed border-gray-400 h-full" />
-                    </div>
-                </div>
-                <div className="flex-[19] w-full">
-                    {!isMobile && (<AnimatedMuiCard hoverScale={1.02} startY={0} endY={0} startX={200} endX={0} duration={1}>
-                        <div className="flex flex-col justify-center min-h-32 p-4 bg-primary">
-                            <div className="flex flex-row">
-                                <h3 className="font-bold flex-[19] text-primary">{index + 1 + ': ' + exp.title}</h3>
-                                {exp.link && (
-                                    <a href={exp.link} target="_blank" rel="noopener noreferrer" className="text-primary pt-1 text-orange-500 text-xl hover:text-black-500">
-                                        <FaExternalLinkAlt className="text-[var(--color-primary-text)]" />
-                                    </a>
-                                )}
-                            </div>
-                            <div className='border-[1px] border-primary my-2 shadow-[0_0_6px_var(--color-secondary-border)'></div>
-                            <p className="text-primary"><strong>{exp.duration}</strong></p>
-                            <ul className="list-disc list-inside pt-4">
-                                {exp.description.map((des, index) => (
-                                    <li key={index} className="text-primary"> {des} </li>
-                                ))}
-                            </ul>
-                            <p className="pt-2 italic text-primary"><strong>Skills used: {exp.skills.join(' . ')}</strong></p>
-                        </div>
-                    </AnimatedMuiCard>)}
-                    {isMobile && (<AnimatedMuiCard hoverScale={1.02}>
-                        <div className="flex flex-col justify-center min-h-32 p-4 bg-primary">
-                            <div className="flex flex-row">
-                                <h3 className="font-bold flex-[19] text-primary">{index + 1 + ': ' + exp.title}</h3>
-                                {exp.link && (
-                                    <a href={exp.link} target="_blank" rel="noopener noreferrer" className="text-primary pt-1 text-orange-500 text-xl hover:text-black-500">
-                                        <FaExternalLinkAlt className="text-[var(--color-primary-text)]" />
-                                    </a>
-                                )}
-                            </div>
-                            <div className='border-[1px] border-primary my-2 shadow-[0_0_6px_var(--color-secondary-border)'></div>
-                            <p className="text-primary"><strong>{exp.duration}</strong></p>
-                            <ul className="list-disc list-inside pt-4">
-                                {exp.description.map((des, index) => (
-                                    <li key={index} className="text-primary"> {des} </li>
-                                ))}
-                            </ul>
-                            <p className="pt-2 italic text-primary"><strong>Skills used: {exp.skills.join(' . ')}</strong></p>
-                        </div>
-                    </AnimatedMuiCard>)}
-                </div>
-            </div>
-            ))}
+  return (
+    <div className="px-4">
+      <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <div className="max-w-3xl">
+          <h2 className="text-center text-primary text-float md:text-left">Featured Projects</h2>
+          <p className="mt-3 text-center text-sm leading-7 text-primary opacity-75 md:text-left">
+            A shortlist of projects that show enterprise ownership, workflow thinking, and polished delivery.
+          </p>
         </div>
-    )
+
+        <a
+          href="./assets/pdf/ashikur_rahman.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center gap-2 rounded-full border border-[var(--color-primary-border)] bg-white/5 px-5 py-3 text-sm font-semibold text-primary transition-transform duration-200 hover:-translate-y-0.5 hover:bg-white/10"
+        >
+          Open resume
+        </a>
+      </div>
+
+      <div className="grid gap-6 lg:grid-cols-2">
+        {featuredProjects.map((project) => (
+          <ProjectCard key={project.id} project={project} featured />
+        ))}
+      </div>
+
+      <div className="mt-12">
+        <h3 className="text-center text-2xl text-primary md:text-left">More projects</h3>
+        <div className="mt-6 space-y-6">
+          {otherProjects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }

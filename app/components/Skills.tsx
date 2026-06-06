@@ -76,7 +76,7 @@ export default function Skills() {
     const isMobile = useIsMobile();
 
     return (
-        <div className='felx felx-col px-4'>
+        <div className='flex flex-col px-4'>
             <h2 className='text-center text-primary text-float'>Professional skills</h2>
             <h2 className="text-primary">Skills</h2>
             {!isMobile && PROFILE_INFO.SkillData.map((skill: ISkill, index) => (
@@ -141,8 +141,9 @@ export default function Skills() {
                         )}
                         {skill.isIconImage && (
                             <div className="flex flex-row gap-2">
-                                {skill.icons.map((Icon) => (
+                                {skill.icons.map((Icon, index) => (
                                     <Image
+                                        key={index}
                                         className="w-6"
                                         src={Icon as string}
                                         alt={skill.name}
@@ -219,8 +220,9 @@ export default function Skills() {
                         )}
                         {skill.isIconImage && (
                             <div className="flex flex-row gap-2">
-                                {skill.icons.map((Icon) => (
+                                {skill.icons.map((Icon, index) => (
                                     <Image
+                                        key={index}
                                         className="w-6"
                                         src={Icon as string}
                                         alt={skill.name}

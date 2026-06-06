@@ -20,6 +20,7 @@ export default function ScrollToTopButton() {
     <button
       onClick={scrollToTop}
       aria-label="Scroll to top"
+      data-site-chrome="scrolltop"
       className={`
         cursor-pointer
         fixed bottom-14 right-6 z-10
@@ -32,7 +33,7 @@ export default function ScrollToTopButton() {
       `}
     >
       <div className="arrow-float">
-        <IconScrollTop className="text-[var(--text-primary)]" size={24} />
+        <IconScrollTop className="text-[var(--color-primary-text)]" size={24} />
       </div>
     </button>
   );

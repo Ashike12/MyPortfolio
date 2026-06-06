@@ -9,27 +9,30 @@ const THEMES = [
 ] as const;
 
 export default function FloatingThemeSwitcher() {
-  const [theme, setTheme] = useState("theme-one");
+  const [theme, setTheme] = useState(() => {
+    if (typeof window === "undefined") {
+      return "theme-one";
+    }
+
+    return localStorage.getItem("theme") || "theme-one";
+  });
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const saved = localStorage.getItem("theme") || "theme-one";
-    setTheme(saved);
-    document.documentElement.className = saved;
-  }, []);
+    document.documentElement.className = theme;
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   const applyTheme = (newTheme: string) => {
-    document.documentElement.className = newTheme;
     setTheme(newTheme);
-    localStorage.setItem("theme", newTheme);
-    setOpen(false); // close after selection
+    setOpen(false);
   };
 
   const currentLabel =
     THEMES.find((t) => t.key === theme)?.label ?? "Theme";
 
   return (
-    <div className="fixed bottom-4 right-4 z-50 w-14">
+    <div data-site-chrome="theme" className="fixed bottom-4 right-4 z-50 w-14">
       <div
         onClick={() => setOpen((o) => !o)}
         className="

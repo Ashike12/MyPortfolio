@@ -28,6 +28,13 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+}
+
+@page {
+  size: A4;
+  margin: 0;
 }
 
 h1 {
@@ -180,4 +187,28 @@ h4 {
       var(--color-gradient-6),
       var(--color-gradient-5),
       var(--color-gradient-2));
+}
+
+.no-print {
+  display: block;
+}
+
+@media print {
+  body {
+    background: #ebe4d9 !important;
+  }
+
+  [data-site-chrome],
+  .no-print {
+    display: none !important;
+  }
+
+  .resume-print-root {
+    padding: 0 !important;
+  }
+
+  .resume-paper {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
 }

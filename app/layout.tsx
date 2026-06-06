@@ -8,7 +8,7 @@ import { PROFILE_INFO } from "./const/my-profile-info.constant";
 
 export const metadata: Metadata = {
   title: PROFILE_INFO.ProfileInfo.Name,
-  description: PROFILE_INFO.ProfileInfo.Designation,
+  description: PROFILE_INFO.ProfileInfo.Headline,
 };
 
 function getThemeByLocalTime(): string {
@@ -29,9 +29,9 @@ export default function RootLayout({
   const initialTheme = getThemeByLocalTime(); 
   return (
     <html lang="en" className={initialTheme}>
-      <body className="bg-primary text-primary w-screen !overflow-x-hidden">
+      <body className="min-h-screen w-full bg-primary text-primary !overflow-x-hidden">
         <Navbar />
-        <main >{children}</main>
+        <main>{children}</main>
         <FloatingThemeSwitcher />
         <ScrollToTopButton />
       </body>

@@ -6,40 +6,36 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Education from "./components/Education";
 
+const sectionClassName =
+  "w-full max-w-6xl scroll-mt-28 px-4 sm:px-6 lg:px-0";
+
 export default function Home(): JSX.Element {
   return (
-    <div className="flex flex-col items-center justify-center pb-10">
-      <div className="bg-[url('/assets/images/bg.jpg')] absolute top-0 left-0 w-full -z-100 h-200 w-full bg-cover bg-center "></div>
-      <section id="home" key="home" className=" pt-15 w-full lg:min-w-[60%] lg:max-w-[60%] md:min-w-[90%] md:max-w-[90%]">
+    <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-16 pb-16 pt-24 sm:pt-28">
+      <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[34rem] bg-[url('/assets/images/bg.jpg')] bg-cover bg-center opacity-30" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[34rem] bg-gradient-to-b from-black/30 via-transparent to-[var(--color-primary-bg)]" />
+
+      <section id="home" className={sectionClassName}>
         <Profile />
       </section>
 
-      <section
-        id="skills" key={'skills'}
-        className="pt-15 w-full lg:min-w-[60%] lg:max-w-[60%] md:min-w-[90%] md:max-w-[90%]"
-      >
+      <section id="skills" className={sectionClassName}>
         <Skills />
       </section>
 
-      <section
-        id="tools" key={'tools'}
-        className="pt-15 w-full lg:min-w-[60%] lg:max-w-[60%] md:min-w-[90%] md:max-w-[90%]"
-      >
+      <section id="tools" className={sectionClassName}>
         <Tools />
       </section>
 
-      <section id="experiences" key={'experiences'} className=" pt-15 w-full lg:min-w-[60%] lg:max-w-[60%] md:min-w-[90%] md:max-w-[90%]">
+      <section id="experiences" className={sectionClassName}>
         <Experience />
       </section>
 
-      <section id="projects" key={'projects'} className=" pt-15 w-full lg:min-w-[60%] lg:max-w-[60%] md:min-w-[90%] md:max-w-[90%]">
+      <section id="projects" className={sectionClassName}>
         <Projects />
       </section>
 
-      <section
-        id="education" key={'education'}
-        className="pt-15 w-full lg:min-w-[60%] lg:max-w-[60%] md:min-w-[90%] md:max-w-[90%]"
-      >
+      <section id="education" className={sectionClassName}>
         <Education />
       </section>
     </div>
