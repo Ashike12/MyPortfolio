@@ -29,7 +29,15 @@ export default function RootLayout({
   const initialTheme = getThemeByLocalTime(); 
   return (
     <html lang="en" className={initialTheme}>
-      <body className="min-h-screen w-full bg-primary text-primary !overflow-x-hidden">
+      <body className="relative isolate min-h-screen w-full bg-primary text-primary !overflow-x-hidden">
+        <div data-site-background aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+          <div className="portfolio-animated-bg absolute inset-0" />
+          <div className="portfolio-soft-vignette absolute inset-0" />
+          <div className="portfolio-orb portfolio-orb-one absolute" />
+          <div className="portfolio-orb portfolio-orb-two absolute" />
+          <div className="portfolio-orb portfolio-orb-three absolute" />
+          <div className="portfolio-orb portfolio-orb-four absolute hidden md:block" />
+        </div>
         <Navbar />
         <main>{children}</main>
         <FloatingThemeSwitcher />
